@@ -8,14 +8,35 @@ function corAleatoria() {
 }
 
 function iniciaCores() {
-	const preto = document.getElementById('preto')
-	const verde = document.getElementById('verde')
-	const amarelo = document.getElementById('amarelo')
-	const vermelho = document.getElementById('vermelho')
-	preto.style.backgroundColor = corAleatoria()
-	verde.style.backgroundColor = corAleatoria()
-	amarelo.style.backgroundColor = corAleatoria()
-	vermelho.style.backgroundColor = corAleatoria()
+	const preto = document.getElementById('preto');
+	const verde = document.getElementById('verde');
+	const amarelo = document.getElementById('amarelo');
+	const vermelho = document.getElementById('vermelho');
+	preto.style.backgroundColor = corAleatoria();
+	verde.style.backgroundColor = corAleatoria();
+	amarelo.style.backgroundColor = corAleatoria();
+	vermelho.style.backgroundColor = corAleatoria();
+}
+
+function desenharQuadro(tamanho) {
+	const quadro =document.getElementById('pixel-board');
+	const dimensoes = tamanho * 50;
+	const xy = tamanho * tamanho;
+	quadro.style.width = `${dimensoes}px`;
+	quadro.style.maxWidth = `${dimensoes}px`;
+	for (let i = 0; i < (xy); i += 1) {
+		const pixel = document.createElement('div');
+		pixel.className = 'pixel';
+		quadro.appendChild(pixel);
+	}
+}
+
+desenharQuadro(5);
+
+function escolheCor(cor) {
+	const corEscolhida = document.querySelector('.selected');
+	corEscolhida.classList.remove('selected');
+	cor.target.classList.add('selected');
 }
 
 
