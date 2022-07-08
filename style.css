@@ -8,7 +8,7 @@
 }
 
 .color {
-  display: flex;
+  display: inline-block;
   width: 10%;
   border: 1px solid black;
   align-items: center;
@@ -51,9 +51,10 @@
 }
 
 .pixel {
-  display: flex;
+  display: inline-table;
+  flex-wrap: wrap;
   border: 1px solid black;
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   background-color: white;
 }
