@@ -1,3 +1,13 @@
+// const header = document.querySelector('#header')
+// const h1 = document.createElement('h1')
+// h1.innerText = 'Paleta de cores';
+// h1.id = 'title'
+// header.appendChild(h1)
+
+const main = document.querySelector('#main');
+const colorPalette = document.createElement('div')
+colorPalette.id = 'color-palette'
+
 function corAleatoria() {
 	const chars = '0123456789ABCDEF'
 	let color = '#'
@@ -39,7 +49,28 @@ function escolheCor(cor) {
 	cor.target.classList.add('selected');
 }
 
+const corAtiva = document.getElementById('color-palette');
+corAtiva.addEventListener('click', escolheCor);
 
+function corAtual(clickEvent) {
+	const corEscolhida = document.querySelector('.selected').style.backgroundColor;
+	const pintaQuadradinho = clickEvent.target;
+	pintaQuadradinho.style.backgroundColor = corEscolhida
+}
+
+const quadradinhoPintado = document.getElementById('pixel-board');
+quadradinhoPintado.addEventListener('click', corAtual);
+
+function limpaTudo() {
+	const botaoLimpar = document.getElementById('clear-board');
+	botaoLimpar.addEventListener('click', () => {
+		const quadradinhos = document.querySelectorAll('.pixel');
+		for(let i = 0; i < quadradinhos.length; i += 1) {
+			quadradinhos[i].style.backgroundColor = 'white';
+		}
+	})
+}
+limpaTudo();
 
 // }
 // document.getElementById('btn-action').addEventListener('click', () => {

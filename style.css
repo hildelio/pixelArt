@@ -2,17 +2,40 @@
   margin: 0;
 }
 
-.container {
-  height: 100vh;
+#color-palette {
+  height: 100px;
   display: flex;
 }
 
-.colors {
+.color {
   display: flex;
-  width: 20%;
+  width: 10%;
   border: 1px solid black;
   align-items: center;
   justify-content: center;
+}
+.color-selected {
+  display: flex;
+  width: 10%;
+  border: 1px solid black;
+  align-items: center;
+  justify-content: center;
+}
+
+#preto {
+  background-color: black;
+}
+
+#verde {
+  background-color: green;
+}
+
+#amarelo {
+  background-color: yellow;
+}
+
+#vermelho {
+  background-color: red;
 }
 
 .btn {
@@ -20,4 +43,17 @@
   top: 550px;
   left: 47%;
   cursor: pointer;
+}
+
+#pixel-board {
+  width: 100px;
+  height: 100px;
+}
+
+.pixel {
+  display: flex;
+  border: 1px solid black;
+  width: 30px;
+  height: 30px;
+  background-color: white;
 }
