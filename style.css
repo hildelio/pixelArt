@@ -1,11 +1,5 @@
 * {
   margin: 0;
-  background-color: white;
-  justify-content: center;
-}
-
-.main {
-  justify-content: center;
 }
 
 #color-palette {
@@ -18,28 +12,6 @@
   display: inline-block;
   width: 10%;
   border: 1px solid black;
-  align-items: center;
-  justify-content: center;
-}
-
-#preto {
-  background-color: black;
-  color: black;
-}
-
-#verde {
-  background-color: green;
-  color: green;
-}
-
-#amarelo {
-  background-color: yellow;
-  color: yellow;
-}
-
-#vermelho {
-  background-color: red;
-  color: red;
 }
 
 #pixel-board {
@@ -69,8 +41,24 @@
 }
 
 h1 {
+  font-size: 100px;
   text-align: center;
   padding: 20px;
+  background-image: linear-gradient(to bottom, blue, red, yellow, green);
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0.1em 0.1em 0.9em white;
+}
+
+label {
+  background-image: linear-gradient(to bottom, blue, red, yellow, green);
+  color: white;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0.1em 0.1em 0.9em white;
 }
 
 body {
@@ -78,4 +66,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+}
+
+div #boardSizeButton {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }

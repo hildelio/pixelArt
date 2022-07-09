@@ -1,12 +1,21 @@
+function generateColor() {
+	const chars = '0123456789ABCDEF'
+	let color = '#'
+	for (let i = 0; i < 6; i += 1) {
+		color += chars.charAt(Math.floor(Math.random() * chars.length))
+	}
+	return color;
+}
+
 function startColors() {
 	const black = document.getElementById('preto');
-	const green = document.getElementById('verde');
-	const yellow = document.getElementById('amarelo');
-	const red = document.getElementById('vermelho');
+	const random1 = document.getElementById('random1');
+	const random2 = document.getElementById('random2');
+	const random3 = document.getElementById('random3');
 	black.style.backgroundColor = 'black';
-	green.style.backgroundColor = 'green';
-	yellow.style.backgroundColor = 'yellow';
-	red.style.backgroundColor = 'red';
+	random1.style.backgroundColor = generateColor();
+	random2.style.backgroundColor = generateColor();
+	random3.style.backgroundColor = generateColor();
 }
 startColors()
 
@@ -26,7 +35,7 @@ function nowColor(clickEvent) {
 }
 
 function drawBoard(size) {
-	const board =document.getElementById('pixel-board');
+	const board = document.getElementById('pixel-board');
 	const dimensoes = size * 50;
 	const xy = size * size;
 	board.style.width = `${dimensoes}px`;
@@ -37,6 +46,7 @@ function drawBoard(size) {
 		board.appendChild(pixel);
 	}
 }
+
 drawBoard(5);
 
 const paintedBoard = document.getElementById('pixel-board');
@@ -46,11 +56,10 @@ function clearAll() {
 	const clearBotton = document.getElementById('clear-board');
 	clearBotton.addEventListener('click', () => {
 		const smallBoards = document.querySelectorAll('.pixel');
-		for(let i = 0; i < smallBoards.length; i += 1) {
+		for (let i = 0; i < smallBoards.length; i += 1) {
 			smallBoards[i].style.backgroundColor = 'white';
 		}
 	})
 }
-clearAll();
 
-const body = document.getElementById('body')
+clearAll();

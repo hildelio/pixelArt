@@ -16,14 +16,33 @@
 	<main class="main">
 		<div id="color-palette">
 			<div class="color selected" id="preto"></div>
-			<div class="color" id="verde"></div>
-			<div class="color" id="amarelo"></div>
-			<div class="color" id="vermelho"></div>
+			<div class="color" id="random1"></div>
+			<div class="color" id="random2"></div>
+			<div class="color" id="random3"></div>
 		</div>
 
 		<button id="clear-board">
 			Limpar
 		</button>
+
+		<div id="boardSizeButton">
+			<label for="board-size">Altera Colunas x Linhas do Quadro</label><br>
+			<input type="number" name="boardSize" id="board-size" min="1" max="50">
+			<button id="generate-board">VQV</button>
+		</div>
+		<!-- <form action="changeBoard" method="get" id="form">
+			<label for="changeBoard">Escolha o Número de Linhas x Colunas</label><br>
+			<select name="changing" id="">
+				<option value="5">5</option>
+				<option value="10">10</option>
+				<option value="20">20</option>
+				<option value="25">25</option>
+				<option value="30">30</option>
+		//estava pensando em como retornar esse resultado na função drawBoard, pesquisei metódo GET sem sucesso e pensei em utilzar o mesmo selected que utilizei para selecionar as cores.
+			</select>
+			<input type="submit" value="Alterar Quadro">
+		</form> -->
+		
 
 		<div id="pixel-board"></div>
 	</main>
