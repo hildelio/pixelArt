@@ -34,12 +34,23 @@ function nowColor(clickEvent) {
 	drawing.style.backgroundColor = pickedColor;
 }
 
+const paintedBoard = document.getElementById('pixel-board');
+paintedBoard.addEventListener('click', nowColor);
+
+function clearing() {
+	const board = document.querySelectorAll('.pixel');
+	for (let i = 0; i < board.length; i += 1) {
+		board[i].remove();
+	}
+}
+
 function drawBoard(size) {
+	clearing()
 	const board = document.getElementById('pixel-board');
-	const dimensoes = size * 50;
+	const dimension = size * 50;
 	const xy = size * size;
-	board.style.width = `${dimensoes}px`;
-	board.style.maxWidth = `${dimensoes}px`;
+	board.style.width = `${dimension}px`;
+	board.style.maxWidth = `${dimension}px`;
 	for (let i = 0; i < (xy); i += 1) {
 		const pixel = document.createElement('div');
 		pixel.className = 'pixel';
@@ -47,10 +58,7 @@ function drawBoard(size) {
 	}
 }
 
-drawBoard(5);
-
-const paintedBoard = document.getElementById('pixel-board');
-paintedBoard.addEventListener('click', nowColor);
+drawBoard(5)
 
 function clearAll() {
 	const clearBotton = document.getElementById('clear-board');
@@ -61,5 +69,26 @@ function clearAll() {
 		}
 	})
 }
-
 clearAll();
+
+		function sizeMinMax() {
+			const inputBoard = document.getElementById('board-size');
+			if (inputBoard.value < 5) {
+				inputBoard.value = 5;
+			} else if (inputBoard.value > 50) {
+				inputBoard.value = 50;
+			}
+		}
+		
+		function inputVazio() {
+			const input = document.getElementById('board-size');
+			if (input.value === '') {
+				alert('Board inválido!');
+			} else {
+				sizeMinMax();
+				drawBoard(input.value);
+			}
+		}
+
+		const clickSize = document.getElementById('generate-board');
+		clickSize.addEventListener('click', inputVazio);

@@ -19,7 +19,6 @@
   height: 400px;
   padding: 20px;
   margin: auto;
-  margin-left: 40%;
 }
 
 .pixel {
@@ -32,7 +31,7 @@
 }
 
 #clear-board {
-  display: block;
+  display: flex;
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
@@ -50,9 +49,12 @@ h1 {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-shadow: 0.1em 0.1em 0.9em white;
+  display: flex;
+  justify-content: center;
 }
 
 label {
+  font-size: 25px;
   background-image: linear-gradient(to bottom, blue, red, yellow, green);
   color: white;
   background-clip: text;
@@ -69,7 +71,8 @@ body {
 }
 
 div #boardSizeButton {
-  display: block;
+  display: flex;
+  justify-content: center;
   margin-left: auto;
   margin-right: auto;
 }
