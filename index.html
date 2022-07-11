@@ -25,10 +25,12 @@
 			Limpar
 		</button>
 
-		<div id="boardSizeButton">
-			<label for="board-size">Altera Colunas x Linhas do Quadro</label><br>
-			<input type="number" name="board-size" id="board-size" min="1" max="50">
-			<button id="generate-board">VQV</button>
+		<div class="container" id="boardSizeButton">
+			<label for="board-size" id="label">Altera Colunas x Linhas do Quadro</label><br>
+			<div id="input-button">
+				<input type="number" name="board-size" id="board-size" min="1" max="50">
+				<button id="generate-board">VQV</button>
+			</div>
 		</div>
 		
 		<div id="pixel-board"></div>
