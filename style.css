@@ -7,9 +7,16 @@
 }
 
 #color-palette {
-  height: 100px;
+  height: 50px;
+  width: 550px;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  background-image: linear-gradient(to bottom, blue, red, yellow, green);
+  color: white;
+  opacity: 0.95;
+  padding: 10px;
+  margin: 5px 350px;
+  border-radius: 10px;
 }
 
 .color {
@@ -19,8 +26,10 @@
 }
 
 #pixel-board {
-  width: 400px;
-  height: 400px;
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
   padding: 20px;
   margin: auto;
 }
@@ -52,7 +61,6 @@ h1 {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0.1em 0.1em 0.9em white;
   display: flex;
   justify-content: center;
 }
@@ -64,11 +72,10 @@ label {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0.1em 0.1em 0.9em white;
 }
 
 body {
-  background-image: url('backgroundImage.jpg');
+  background-image: url('leao.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -84,8 +91,42 @@ body {
   justify-content: center;
 }
 
-#input-button{
+#input-button {
   display: flex;
   justify-content: center;
 }
 
+#black {
+  display: flex;
+  border-radius: 50%;
+}
+
+#random1 {
+  display: flex;
+  border-radius: 50%;
+}
+
+#random2 {
+  display: flex;
+  border-radius: 50%;
+}
+
+#random3 {
+  display: flex;
+  border-radius: 50%;
+}
+
+button {
+  background-image: linear-gradient(to bottom, blue, red, yellow, green);
+  color: black;
+  opacity: 0.95;
+  border-radius: 10px;
+}
+
+input {
+  background-image: linear-gradient(to bottom, blue, red, yellow, green);
+  color: black;
+  opacity: 0.95;
+  border-radius: 10px;
+  padding: 10px 30px;
+}

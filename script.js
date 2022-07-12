@@ -8,7 +8,7 @@ function generateColor() {
 }
 
 function startColors() {
-	const black = document.getElementById('preto');
+	const black = document.getElementById('black');
 	const random1 = document.getElementById('random1');
 	const random2 = document.getElementById('random2');
 	const random3 = document.getElementById('random3');
